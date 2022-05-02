@@ -1,0 +1,15 @@
+D:\csharp_project\DemoWebsocket\bin\Debug\net6.0-windows\DemoWebsocket.exe
+D:\csharp_project\DemoWebsocket\bin\Debug\net6.0-windows\DemoWebsocket.deps.json
+D:\csharp_project\DemoWebsocket\bin\Debug\net6.0-windows\DemoWebsocket.runtimeconfig.json
+D:\csharp_project\DemoWebsocket\bin\Debug\net6.0-windows\DemoWebsocket.dll
+D:\csharp_project\DemoWebsocket\bin\Debug\net6.0-windows\ref\DemoWebsocket.dll
+D:\csharp_project\DemoWebsocket\bin\Debug\net6.0-windows\DemoWebsocket.pdb
+D:\csharp_project\DemoWebsocket\obj\Debug\net6.0-windows\DemoWebsocket.csproj.AssemblyReference.cache
+D:\csharp_project\DemoWebsocket\obj\Debug\net6.0-windows\DemoWebsocket.GeneratedMSBuildEditorConfig.editorconfig
+D:\csharp_project\DemoWebsocket\obj\Debug\net6.0-windows\DemoWebsocket.AssemblyInfoInputs.cache
+D:\csharp_project\DemoWebsocket\obj\Debug\net6.0-windows\DemoWebsocket.AssemblyInfo.cs
+D:\csharp_project\DemoWebsocket\obj\Debug\net6.0-windows\DemoWebsocket.csproj.CoreCompileInputs.cache
+D:\csharp_project\DemoWebsocket\obj\Debug\net6.0-windows\DemoWebsocket.dll
+D:\csharp_project\DemoWebsocket\obj\Debug\net6.0-windows\ref\DemoWebsocket.dll
+D:\csharp_project\DemoWebsocket\obj\Debug\net6.0-windows\DemoWebsocket.pdb
+D:\csharp_project\DemoWebsocket\obj\Debug\net6.0-windows\DemoWebsocket.genruntimeconfig.cache
