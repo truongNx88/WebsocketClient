@@ -1,18 +1,33 @@
 /**
 * WebSocketClient.cs
 * Author: Nguyen Xuan Truong
-* Created at: 05/02/2022
+* Created at: 02/05/2022
 */
 
 using System.Net.WebSockets;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+
+using Event.LicenseEvent;
 
 namespace Connection.WebSocketClient {
     class WebSocketClient {
         // private UTF8Encoding encoder; // For websocket text message encoding.
         private const UInt64 MAXREADSIZE = 1 * 1024 * 1024;
+
+        private const string TYPE_KEY = "type";
+        private const string EVENT_TYPE = "license";
+
+        private const string EXTRAS_KEY = "extras";
+
+        private const string OBJECTS_KEY = "objects";
+        private const string LICENSE_KEY = "license";
+        private const string CROP_KEY = "crop_id";
+        private const string IMAGE_KEY = "image_id";
+
+
         private ClientWebSocket ws;
         public WebSocketClient() {
             this.ws = new ClientWebSocket();
@@ -68,6 +83,24 @@ namespace Connection.WebSocketClient {
                 result = await receive();
                 if ((result != null) && (result.Length > 0)) {
                     Console.WriteLine("Result message: {0}", result);
+                    try {
+                        JObject jEvent = JObject.Parse(result);
+                        if ( (jEvent != null) && (jEvent.ContainsKey(TYPE_KEY)) && (jEvent.GetValue(TYPE_KEY).ToString().Equals(EVENT_TYPE)) ) {
+                            JArray jObjects = JArray.Parse(jEvent.GetValue(EXTRAS_KEY).SelectToken(OBJECTS_KEY).ToString());
+                            Console.WriteLine("Objects: {0}", jObjects);
+                            if ( (jObjects != null) ) {
+                                foreach (JObject jObject in jObjects.Children<JObject>() ) {
+                                    Console.WriteLine("Object: {0}", jObject);
+                                }   
+                            }
+                           
+                        }
+                    }
+                    catch (System.Exception e) {
+                        Console.WriteLine("Error: {0}", e);
+                        throw;
+                    }
+                    
                 }
                 else {
                     Task.Delay(50).Wait();

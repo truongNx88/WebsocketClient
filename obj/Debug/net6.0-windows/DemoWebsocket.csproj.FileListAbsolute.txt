@@ -13,3 +13,5 @@ D:\csharp_project\DemoWebsocket\obj\Debug\net6.0-windows\DemoWebsocket.dll
 D:\csharp_project\DemoWebsocket\obj\Debug\net6.0-windows\ref\DemoWebsocket.dll
 D:\csharp_project\DemoWebsocket\obj\Debug\net6.0-windows\DemoWebsocket.pdb
 D:\csharp_project\DemoWebsocket\obj\Debug\net6.0-windows\DemoWebsocket.genruntimeconfig.cache
+D:\csharp_project\DemoWebsocket\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+D:\csharp_project\DemoWebsocket\obj\Debug\net6.0-windows\DemoWebsocket.csproj.CopyComplete
