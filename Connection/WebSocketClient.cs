@@ -35,7 +35,8 @@ namespace Connection.WebSocketClient {
         public async Task connect(string urlServer) {
             Console.WriteLine("Connect server: {0}", new Uri(urlServer).ToString());
             if (urlServer.Contains("wss")) {
-                ws.Options.ClientCertificates = new X509CertificateCollection();
+                // ws.Options.ClientCertificates = new X509CertificateCollection();
+                ws.Options.RemoteCertificateValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
             }
             await ws.ConnectAsync(new Uri(urlServer), CancellationToken.None);
             if (isConnecting()) {
